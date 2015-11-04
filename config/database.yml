@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: siyento_rails_development
+
+test:
+  <<: *default
+  database: siyento_rails_test
+
+production:
+  <<: *default
+  database: siyento_rails_production
+  username: siyento_rails
+  password: <%= ENV['SIYENTO_RAILS_DATABASE_PASSWORD'] %>
