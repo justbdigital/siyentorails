@@ -4,3 +4,10 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+namespace :parser do
+  desc "Parse all content and store into database"
+  task :parse_all do
+    ParsersSchedule.new.fetch_all
+  end
+end

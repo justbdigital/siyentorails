@@ -1,18 +1,20 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-
 development:
-  <<: *default
-  database: siyento_rails_development
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
 
 test:
-  <<: *default
-  database: siyento_rails_test
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: siyento_rails_production
   username: siyento_rails
   password: <%= ENV['SIYENTO_RAILS_DATABASE_PASSWORD'] %>
+  pool: 25
