@@ -1,14 +1,169 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>SiyentoRails</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="propeller" content="6890b1627eaa480702bc476fa88bc9ee" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
 
-<%= yield %>
+    <title>Everything under ₱100 - SIYENTO amazing deals in the Philippines</title>
+<meta name="propeller" content="6890b1627eaa480702bc476fa88bc9ee" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-</body>
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69140633-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="<%= image_path 'siyentotitle.png' %>" width="160"></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+<!--             <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li> -->
+            <li><a href="#"><i class="fa fa-cogs fa-2x"></i></a></li>
+<!--             <li class="dropdown active">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs fa-2x"></i><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">THAILAND</a></li>
+                <li><a href="#">HONG KONG</a></li> -->
+<!--                 <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="single-project.html">SINGLE PROJECT</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+  <!-- *****************************************************************************************************************
+   TITLE & CONTENT
+   ***************************************************************************************************************** -->
+
+   <div class="container mtb">
+     <div class="row">
+       <div class="col-lg-8 col-lg-offset-2 centered">
+         <h2>Amazing deals in the Philippines for ₱100!</h2>
+         <br>
+         <div class="hline"></div>
+       </div>
+     </div>
+   </div>
+
+     <!-- *****************************************************************************************************************
+   Header Ad
+   ***************************************************************************************************************** -->
+  <div align="center">
+  <script src="//go.padstm.com/?id=431723"></script>
+  </div><!-- /headerad -->
+
+ <%= yield %>
+
+    <!-- *****************************************************************************************************************
+     FOOTER AD
+     ***************************************************************************************************************** -->
+    <div align="center">
+     <script src="//go.padstm.com/?id=431728"></script>
+    </div><br><!-- /footerad -->
+
+
+  <!-- *****************************************************************************************************************
+   FOOTER
+   ***************************************************************************************************************** -->
+   <div id="footerwrap">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-4">
+           <h4>About</h4>
+           <div class="hline-w"></div>
+           <p>Siyento brings you amazing offers and deals in the Philippines from Metrodeal, Cashcashpinoy, Ensogo, Tcat, Trendsndeals, Dealgrocer, Pinoygreatdeals & Dealspot.</p>
+         </div>
+         <div class="col-lg-4">
+           <h4>Social</h4>
+           <div class="hline-w"></div>
+           <p>
+             <a href="https://www.facebook.com/siyentoapp"><i class="fa fa-facebook"></i></a>
+             <a href="https://twitter.com/siyentoapp"><i class="fa fa-twitter"></i></a>
+             <a href="https://instagram.com/siyentoapp"><i class="fa fa-instagram"></i></a>
+             <a href="https://pinterest.com/siyento/"><i class="fa fa-pinterest"></i></a>
+
+           </p>
+         </div>
+         <div class="col-lg-4">
+           <h4>Our Newsletter</h4>
+           <div class="hline-w"></div>
+           <p>
+<form class="form email-form" action="/add_email" method="post">
+              <div class="input-group text-center">
+              <input class="form-control" id="focusedInput" type="text" name="email" value="Enter your Email...">
+                <span class="input-group-btn"><button type="submit" class="btn btn-primary">Submit</button></span>
+              </div>
+            </form>
+           </p>
+         </div>
+
+       </div><! --/row -->
+     </div><! --/container -->
+   </div><! --/footerwrap -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <%# <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> %>
+  <%# <script src="js/bootstrap.min.js"></script> %>
+  <%# <script src="js/retina-1.1.0.js"></script> %>
+  <%# <script src="js/jquery.modal.min.js"></script> %>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <%# <script src="js/custom.js"></script> %>
+  <script async="async" type="text/javascript" src="//go.mobisla.com/notice.php?p=431729&interactive=1&pushup=1"></script>
+
+  <div class="modal range-slider">
+    <div id="amount">LESS THAN ₱<span>100</span></div>
+    <div id="range-slider"></div>
+    <div class="btn btn-block btn-success" id="apply-filter">APPLY</div>
+  </div>
+
+  <div class="modal subscription-info">
+    <h3></h3>
+    <div class="btn btn-block btn-success" id="close-subscription-info">Got it</div>
+  </div>
+  </body>
 </html>

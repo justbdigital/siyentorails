@@ -2,7 +2,7 @@ class TrendsndealsParser < ParserBase
   ITEMS_URL = "http://www.trendsndeals.com/?p=%s"
 
   def retrieve
-    data = []
+    return data = []
     10.times do |time|
       response = conn.get ITEMS_URL % (time + 1)
       data << response.body
@@ -11,6 +11,7 @@ class TrendsndealsParser < ParserBase
   end
 
   def transform data
+    return data
     data.flat_map do |item|
       process item
     end

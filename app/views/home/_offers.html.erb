@@ -1,0 +1,45 @@
+<% @offers.each_slice(4) do |offers| %>
+<div class="row">
+  <% offers.each do |offer| %>
+  <% @index += 1 %>
+  <div class="col-md-3">
+    <a href="#modal-<%=offer.id %>" rel="modal:open" >
+      <div class="portfolio-item rollover">
+        <div class="he-wrap tpl6">
+          <img src="<%= offer.image_url %>" alt="Siyento" style="width: 271px; height: 203px;">
+        </div><!-- he wrap -->
+        <div class="fade-item">
+          <div class="info">
+            <div><%= offer.title %></div>
+            <div>₱<%= offer.deal_price.to_i %></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div id="modal-<%=offer.id %>" class="modal">
+      <div>
+        <h3> <%= offer.title %> </h3>
+        <div> <img src="<%= offer.image_url %>" /> </div>
+        <span> ₱<%= offer.deal_price %> </span>
+        <span class="past-price"> ₱<%= offer.original_price %> </span>
+        <div> <%= offer.description %></div>
+        <br/>
+        <a class="btn-block btn-success" href="<%= offer.deal_url %>" target="_blank"> BUY </a>
+        <a class="btn-block btn-warning" href="#" rel="modal:close"> VIEW MORE </a>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% if (@index % 10) == 0 %>
+<% @index = 0 %>
+<div class="row">
+  &nbsp;
+  <div align="center">
+  <script src="//go.padstm.com/?id=431730"></script>
+  </div>
+
+</div>
+<% end %>
+<% end %>
