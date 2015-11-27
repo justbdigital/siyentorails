@@ -13,7 +13,7 @@ class EnsogoParser < ParserBase
   end
 
   def parse item
-    image_url = item.css(".img-holder img")[0].attributes["src"].value
+    image_url = item.css(".img-holder img")[0].attributes["data-original"].value
     deal_url = item.css('a')[0].attributes["href"].value
     deal_price = parse_number(item.css('.desc .currency')[0].children[1].text)
     original_price =  fetch_orginal_price item, deal_price
