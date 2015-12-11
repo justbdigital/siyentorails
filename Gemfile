@@ -14,6 +14,8 @@ gem 'nokogiri'
 gem 'mechanize'
 gem 'whenever'
 gem 'gibbon'
+gem 'devise'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
@@ -28,6 +30,7 @@ group :development, :test do
   gem 'capistrano'
   gem "capistrano-bundler"
   gem 'capistrano-rvm'
+  gem 'quiet_assets'
 end
 
 group :development do
@@ -38,5 +41,6 @@ end
 group :test do
   gem 'webmock'
   gem 'vcr'
+  gem 'database_cleaner'
 end
 
