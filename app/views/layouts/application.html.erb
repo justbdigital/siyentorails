@@ -31,7 +31,7 @@
 
   </head>
 
-  <body>
+  <body data-error="<%=flash[:error] %>">
     <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -60,6 +60,10 @@
 <!--             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li> -->
             <li><a href="#"><i class="fa fa-cogs fa-2x"></i></a></li>
+            <% unless current_user %>
+            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+            <% end %>
+            
 <!--             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs fa-2x"></i><b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -159,6 +163,13 @@
     <div id="amount">LESS THAN ₱<span>100</span></div>
     <div id="range-slider"></div>
     <div class="btn btn-block btn-success" id="apply-filter">APPLY</div>
+  </div>
+
+  <div class="modal error">
+    <h3 class="text-center">Error</h3>
+    <p></p>
+    <div class="btn btn-block btn-warning" id="close-error">Close</div>
+    
   </div>
 
   <div class="modal subscription-info">

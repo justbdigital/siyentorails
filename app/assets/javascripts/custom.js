@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  var error_msg = $('body').data('error')
+  if (error_msg != "") {
+    var modal_text = $(".modal.error p");
+    modal_text.empty();
+    modal_text.append(error_msg);
+    $(".modal.error #close-error").click(function(){
+      $.modal.close();
+    });
+
+    $(".modal.error").modal();
+  }
 
   $(".fa.fa-cogs").click(function(){
     $(".modal.range-slider").modal();
